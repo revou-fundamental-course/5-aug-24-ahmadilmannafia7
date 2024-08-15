@@ -29,6 +29,7 @@ document.getElementById('bmiForm').addEventListener('submit', function(event) {
     let kategori = '';
     if (bmi < 18.5) {
         kategori = 'underweight';
+        penjelasan = 'anda kurang makan'
     } else if (bmi >= 18.5 && bmi <= 24.9) {
         kategori = 'healthy';
     } else if (bmi >= 25 && bmi <= 29.9) {
@@ -40,12 +41,11 @@ document.getElementById('bmiForm').addEventListener('submit', function(event) {
     // Tampilkan hasil BMI dan kategori
     document.getElementById('bmiValue').textContent = bmi;
     document.getElementById('kategoriValue').textContent = `You are ${kategori}!`;
+    
 
     // Ubah warna hasil berdasarkan kategori
     const resultElement = document.getElementById('kategoriValue');
     resultElement.className = ''; // Reset class
     resultElement.classList.add(kategori.toLowerCase());
 
-    // Reset form setelah submit
-    document.getElementById('bmiForm').reset();
 });
