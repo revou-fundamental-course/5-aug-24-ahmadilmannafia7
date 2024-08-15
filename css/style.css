@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    min-height: 700px;
+}
+
+.header{
+    width: 100%;
+    height: 20%;
+    background-color: #512da8;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+}
+
+.inputs {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #8e24aa;
+    font-size: 1.5em;
+    color: #8e24aa;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.gender-selection {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gender-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.female {
+    background-image: url('https://cdn-icons-png.flaticon.com/128/9220/9220623.png');
+}
+
+.male {
+    background-image: url('https://cdn-icons-png.flaticon.com/128/2404/2404482.png');
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    filter: brightness(1.5);
+}
+
+.gender-prompt {
+    color: #b3b3b3;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+button {
+    background-color: #fff;
+    border: 2px solid #8e24aa;
+    border-radius: 5px;
+    color: #8e24aa;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #8e24aa;
+    color: #fff;
+}
+
+.result {
+    padding: 20px;
+    
+}
+
+.result p {
+    margin: 5px;
+    font-size: 2em;
+    color: #8e24aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.category {
+    padding: 5px;
+    color: #8e24aa;
+}
+
+.category span {
+    font-weight: normal;
+    font-size: 0.8em;
+    display: block;
+}
+
+.underweight {
+    color: #1976d2;
+}
+
+.healthy {
+    color: #388e3c;
+}
+
+.overweight {
+    color: #fbc02d;
+}
+
+.obese {
+    color: #d32f2f;
+}
+

@@ -1,16 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <div>
-        <button class="btn">
-            tidak ada
-        </button>
+    <div class="container">
+        <div class="header">BMI Calculator</div>
+        <form id="bmiForm">
+            <div class="gender-selection" id="gender">
+                <input type="radio" id="wanita" name="gender" value="wanita">
+                <label for="wanita" class="gender-icon female"></label>
+
+                <input type="radio" id="pria" name="gender" value="pria">
+                <label for="pria" class="gender-icon male"></label>
+            </div>
+
+            <p class="gender-prompt">(choose your gender)</p>
+
+
+            <div class="inputs">
+                <div class="input-group">
+                    <input type="number" id="tinggi" placeholder="--" required>
+                    <span>Height (cm)</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="berat" placeholder="--" required>
+                    <span>Weight (kg)</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="usia" placeholder="--" required>
+                    <span>Usia (tahun)</span>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="calculate-btn">Calculate</button>
+            </div>
+
+            <div class="result">
+                <p id="bmiValue">--</p>
+                <p id="kategoriValue">--</p>
+            </div>
+
+            <div class="categories">
+
+                <div class="category underweight">Underweight<br><span>Below 18.5</span></div>
+                <div class="category healthy">Healthy<br><span>18.5 - 24.9</span></div>
+                <div class="category overweight">Overweight<br><span>25 - 29.9</span></div>
+                <div class="category obese">Obese<br><span>30 and Above</span></div>
+            </div>
+
+        </form>
+
     </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
